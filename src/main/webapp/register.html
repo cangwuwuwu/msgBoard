@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>请完成注册！</title>
+    <link href="img/pageicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>
+            <a class="navbar-brand glyphicon glyphicon-chevron-left" href="index.html"></a>
+        </div>
+    </div>
+</nav>
+    <div id="setbg" class="container">
+            <form action="register" method="post" class="form-horizontal col-sm-7">
+                <div class="form-group">
+                    <div>
+                        <span class="fontRegister">会员注册</span>
+                        <strong>USER REGISTER</strong>
+                    </div>
+                </div>
+                <div class="form-group labelInfo-position">
+                    <label for="stuId" class="col-sm-2 control-label">学号</label>
+                    <div class="col-sm-6">
+                        <input id="stuId" type="number" name="number" class="col-xs-11 form-control" autocomplete="off" required placeholder="Student ID">
+                    </div>
+                    <label id="info-exist" class="col-sm-4 col-xs-1 labelInfo" style="font-size: large">*</label>
+                </div>
+                <div class="form-group labelInfo-position">
+                    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="password" class="col-xs-11 form-control" id="inputPassword3" autocomplete="off" required placeholder="Password">
+                    </div>
+                    <label class="col-sm-4 col-xs-1 labelInfo" style="font-size: large">*</label>
+                </div>
+                <div class="form-group labelInfo-position">
+                    <label for="retrypassword" class="col-sm-2 control-label">确认密码</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="rePassword" class="col-xs-11 form-control" id="retrypassword" autocomplete="off" required placeholder="Please retry password">
+                    </div>
+                    <label class="col-sm-4 col-xs-1 labelInfo" style="font-size: large">*</label>
+                </div>
+                <div class="form-group labelInfo-position">
+                    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+                    <div class="col-sm-6">
+                        <input type="email" name="email" class="col-xs-11 form-control" id="inputEmail3" autocomplete="off" required placeholder="Email">
+                    </div>
+                    <label class="col-sm-4 col-xs-1 labelInfo" style="font-size: large">*</label>
+                </div>
+                <div class="form-group labelInfo-position">
+                    <label for="myName" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-6">
+                        <input id="myName" type="text" name="username" class="col-xs-11 form-control" autocomplete="off" required placeholder="Name">
+                    </div>
+                    <label class="col-sm-4 col-xs-1 labelInfo" style="font-size: large">*</label>
+                </div>
+                <div class="form-group">
+                        <label class="col-sm-2 col-xs-3 control-label">性别</label>
+                    <div class="col-sm-4 col-xs-9">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="男"> 男
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="女"> 女
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="秘密">秘密
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group hidden-xs">
+                    <label for="phoneNum" class="col-sm-2 control-label">电话号码</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="phoneNum" name="phoneNum" class="form-control" autocomplete="off" placeholder="PhoneNumber">
+                    </div>
+                </div>
+                <div class="form-group hidden-xs dropdown">
+                    <label for="datepicker" class="col-sm-2 control-label">出生日期</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="birthday" id="datepicker" autocomplete="off" class="form-control" size="31" placeholder="选择生日月日后修改年份">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="inputCode" autocomplete="off" required class="col-sm-3 col-xs-8 form-control" style="width: 120px">
+                        <div class="col-sm-4 col-xs-4" style="padding-left: 10px">
+                            <img src="changeImg" onclick="changeImg(this)" class="code">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2 col-xs-3">
+                        <button type="submit" id="register" class="buttonRegister btn btn-primary">注册</button>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-xs-7">
+                            <label class="labelInfo">(Tips:带*为必填选项)</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script charset="UTF-8" src="js/register.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        // 单机验证码切换
+        function changeImg(obj) {
+            obj.src="changeImg?time="+new Date().getTime();
+        }
+        $(function () {
+            $("#stuId").blur(function () {
+                var _number = $(this).val();
+                $.get("findUserByIdServlet",{number:_number},function (data) {
+                    var exist = $("#info-exist");
+                    if (data.IdExsit) {
+                        // 学号已被注册
+                        exist.css("color","red");
+                        exist.html("");
+                        exist.append("<span class='glyphicon glyphicon-remove'></span> "+ data.msg +"");
+                    } else {
+                        // 学号可以注册
+                        exist.css("color","green");
+                        exist.html("");
+                        exist.append("<span class='glyphicon glyphicon-ok'></span> " + data.msg +"");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body {
+    background: url("../img/background6.jpg") fixed;
+    background-size: cover;
+}
+#setbg {
+    margin-top: 140px;
+    width: 600px;
+    height: 580px;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    border-radius: 5px;
+    opacity: .3;
+    transition: all 1.5s;
+}
+#setbg:hover {
+    opacity: 1;
+}
+.form-control {
+    width: 250px;
+}
+.form-horizontal {
+    width: 580px;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.code {
+    cursor: pointer;
+}
+.fontRegister {
+    font-size: 30px;
+    color: #2aabd2;
+    padding-left: 60px;
+}
+p {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+p span {
+    color: white;
+}
+.labelInfo {
+    color: red;
+}
+.labelInfo-position > div{
+    width: 260px;
+}
+.buttonRegister {
+    width: 86px;
+}
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff!important;
+}
+.navbar {
+    border: none;
+    font-family: YouYuan;
+    background: transparent;
+}

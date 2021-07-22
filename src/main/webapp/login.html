@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>请登录</title>
+    <link href="img/pageicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 0;
+            font-weight: 300;
+            background: url("img/background4.jpg") no-repeat fixed;
+            background-size: cover;
+            font-family: YouYuan,serif;
+        }
+        .box{
+            border-radius: 5px;
+            box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+            overflow: hidden;
+            text-align: center;
+            width: 400px;
+            padding-top: 10px;
+            background-color: #fff;
+            margin: 200px auto 0 auto;
+            opacity: .3;
+            transition: all 1.5s;
+        }
+        .box:hover {
+            opacity: 1;
+        }
+        .input-center {
+            width: 92%;
+            margin-left: 17px;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            box-shadow: 0 0 0 0;
+            border-radius: 0;
+        }
+        img {
+            border-radius: 5px;
+        }
+        .submit {
+            width: 368px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #2196f3;
+        }
+        .navbar {
+            border: none;
+            opacity: .4;
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+            background: -o-linear-gradient(right, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+            background: -moz-linear-gradient(right, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+        }
+        .homepage {
+            font-size: 30px;
+            color: #2196f3!important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>
+            <a class="navbar-brand homepage glyphicon glyphicon-chevron-left" href="index.html"></a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <form action="login" method="post">
+        <div class="box">
+            <div class="form-group">
+                <label for="exampleInputEmail1">学号</label>
+                <input type="text" class="input-center form-control" id="exampleInputEmail1"
+                       name="email_id" autocomplete="off" required placeholder="student ID"
+                        value="2017101943">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">密码</label>
+                <input type="password" class="input-center form-control" id="exampleInputPassword1"
+                       name="password" autocomplete="off" required placeholder="Password"
+                value="xu1234">
+            </div>
+            <div class="form-group">
+                <label for="input-center">验证码</label>
+                <div>
+                    <input type="text" id="input-center" class="input-center form-control col-md-6" style="width: 200px;" name="inputCode" autocomplete="off" required placeholder="Verification code">
+                    <img src="changeImg" onclick="changeImg(this)" style="cursor: pointer;"><br />
+                </div>
+                <button type="submit" class="btn btn-primary submit">登录</button><br>
+                <span ><a href="register.html">还没有账号？快速注册</a></span>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="js/jquery-2.1.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script>
+    function changeImg(obj) {
+        obj.src="changeImg?time="+new Date().getTime();
+    }
+    $(".navbar").mouseover(function () {
+        $(".navbar-header").css({"opacity":1});
+    }).mouseout(function () {
+        $(".navbar-header").css({"opacity":.5});
+    });
+</script>
+</body>
+</html>
